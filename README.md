@@ -1,4 +1,4 @@
-README for Floppy Disk Image Creation Tool
+README for Floppy Image
 
 This Python script provides a simple command-line interface for creating and optionally formatting a floppy disk image. It supports both Unix-like (Linux, macOS) and Windows operating systems. The tool creates a blank, unformatted floppy disk image of size 1.44 MB, which can then be optionally formatted with a FAT12 filesystem.
 
@@ -15,13 +15,16 @@ Requirements
 Additional Setup for macOS
   Before running the script on macOS, you need to install Homebrew (a package manager for macOS) and dosfstools (to enable FAT12 filesystem formatting). Use the following commands in the terminal:
 
+    Install Command Line Tools for Xcode
+    sudo xcode-select --install
+
     Install Homebrew:
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     Install dosfstools:
     brew install dosfstools
 
-    Correct Path for Homebrew (to run homebrew installed apps):
+    Setting up your Path:
     sudo echo 'export PATH="/opt/homebrew/sbin:$PATH"' >> ~/.zshrc 
     sudo echo 'export PATH="/opt/homebrew/sbin:$PATH"' >> ~/.bash_profile
     Close terminal and reopen
